@@ -1,0 +1,4 @@
+{
+  "tinkertantrum:quarky": ["tinkertantrum:gui/modifiers/quarky"],
+  "tinkertantrum:overcharging": ["tinkertantrum:gui/modifiers/overcharging"]
+}
