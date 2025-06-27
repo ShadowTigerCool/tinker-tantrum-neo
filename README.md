@@ -1,0 +1,2 @@
+## Tinker Tantrum is an addon for Tinkers' Construct, designed for the MC Eternal 2 modpack.
+Tinker Tantrum adds custom Modifiers and other things not possible with just Tinkers' Datapack customization.
