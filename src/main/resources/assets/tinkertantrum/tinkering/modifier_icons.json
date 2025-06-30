@@ -1,4 +1,5 @@
 {
   "tinkertantrum:quarky": ["tinkertantrum:gui/modifiers/quarky"],
-  "tinkertantrum:overcharging": ["tinkertantrum:gui/modifiers/overcharging"]
+  "tinkertantrum:overcharging": ["tinkertantrum:gui/modifiers/overcharging"],
+  "tinkertantrum:ferromagnetic": ["alexscaves:items/ferrouslime_ball", "tconstruct:gui/modifiers/book"]
 }

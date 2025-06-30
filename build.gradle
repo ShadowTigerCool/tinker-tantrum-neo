@@ -4,13 +4,16 @@ plugins {
     id 'maven-publish'
     id 'net.minecraftforge.gradle' version '[6.0,6.2)'
     id 'org.parchmentmc.librarian.forgegradle' version '1.+'
+    //id 'org.spongepowered.mixingradle' version '0.7.+'
 }
+
+//apply plugin: 'org.spongepowered.mixin'
 
 version = mod_version
 group = mod_group_id
 
 base {
-    archivesName = mod_id
+    archivesName = mod_id + "-neo"
 }
 
 // Mojang ships Java 17 to end users in 1.18+, so your mod should target Java 17.
@@ -77,10 +80,12 @@ minecraft {
 
             property 'mixin.env.remapRefMap', 'true'
             property 'mixin.env.refMapRemappingFile', "${buildDir}/createSrgToMcp/output.srg"
+            arg "-mixin.config=${mod_id}.mixins.json"
 
             mods {
                 "${mod_id}" {
                     source sourceSets.main
+                    source sourceSets.test
                 }
             }
         }
@@ -140,6 +145,12 @@ repositories {
         name = "Curios"
         url = uri("https://maven.theillusivec4.top/")
     }
+    maven {
+        url "https://cursemaven.com"
+        content {
+            includeGroup "curse.maven"
+        }
+    }
 }
 
 dependencies {
@@ -165,6 +176,8 @@ dependencies {
     // http://www.gradle.org/docs/current/userguide/artifact_dependencies_tutorial.html
     // http://www.gradle.org/docs/current/userguide/dependency_management.html
 
+    annotationProcessor 'org.spongepowered:mixin:0.8.5:processor'
+
     implementation fg.deobf("slimeknights.mantle:Mantle:${minecraft_version}-${mantle_build}")
     implementation fg.deobf("slimeknights.tconstruct:TConstruct:${minecraft_version}-${tinkers_build}")
 
@@ -173,6 +186,13 @@ dependencies {
     runtimeOnly fg.deobf("top.theillusivec4.curios:curios-forge:${curios_version}+${minecraft_version}")
     runtimeOnly fg.deobf("org.violetmoon.quark:Quark:${quark_version}")
     runtimeOnly fg.deobf("org.violetmoon.zeta:Zeta:${zeta_version}")
+    implementation fg.deobf("curse.maven:alexs-caves-924854:5848216")
+    runtimeOnly fg.deobf("curse.maven:citadel-331936:6702068")
+
+    compileOnly(annotationProcessor("io.github.llamalad7:mixinextras-common:0.4.1"))
+    implementation(jarJar("io.github.llamalad7:mixinextras-forge:0.4.1")) {
+        jarJar.ranged(it, "[0.4.1,)")
+    }
 }
 
 // This block of code expands all declared replace properties in the specified resource targets.
@@ -211,7 +231,12 @@ tasks.named('jar', Jar).configure {
     // This is the preferred method to reobfuscate your jar file
     finalizedBy 'reobfJar'
 }
-
+/*
+mixin {
+    add sourceSets.main, 'tinkertantrum.refmap.json'
+    config 'tinkertantrum.mixins.json'
+}
+*/
 // However if you are in a multi-project build, dev time needs unobfed jar files, so you can delay the obfuscation until publishing by doing:
 // tasks.named('publish').configure {
 //     dependsOn 'reobfJar'

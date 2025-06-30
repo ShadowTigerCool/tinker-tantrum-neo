@@ -1,6 +1,7 @@
 {
   "modifier.tinkertantrum": {
     "quarky": "#86ff14",
-    "overcharging": "#53c0c9"
+    "overcharging": "#53c0c9",
+    "ferromagnetic": "#b1b2b3"
   }
 }

@@ -1,0 +1,12 @@
+{
+  "required": true,
+  "package": "com.mceternal.tinkertantrum.common.mixin",
+  "compatibilityLevel": "JAVA_17",
+  "refmap": "tinkertantrum.refmap.json",
+  "plugin": "com.mceternal.tinkertantrum.common.mixin.TinkerTantrumMixinPlugin",
+  "mixins": [
+    "alexscaves.GalenaGauntletMixin",
+    "alexscaves.MagnetUtilMixin"
+  ],
+  "minVersion": "0.8"
+}

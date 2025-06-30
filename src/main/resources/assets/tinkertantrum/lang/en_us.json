@@ -5,5 +5,9 @@
 
   "modifier.tinkertantrum.overcharging": "Overcharging",
   "modifier.tinkertantrum.overcharging.flavor": "1.21 Jigawatts!",
-  "modifier.tinkertantrum.overcharging.description": "Builds up Overslime on equipped Armor as you deal Damage."
+  "modifier.tinkertantrum.overcharging.description": "Builds up Overslime on equipped Armor as you deal Damage.",
+
+  "modifier.tinkertantrum.ferromagnetic": "Ferromagnetic",
+  "modifier.tinkertantrum.ferromagnetic.flavor": "Shocking?",
+  "modifier.tinkertantrum.ferromagnetic.description": "This item is Ferromagnetic, and can be manipulated by Magnetic forces."
 }

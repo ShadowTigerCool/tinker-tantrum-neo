@@ -2,6 +2,8 @@ package com.mceternal.tinkertantrum.common.modifiers;
 
 import com.mceternal.tinkertantrum.TinkerTantrum;
 import net.minecraftforge.eventbus.api.IEventBus;
+import slimeknights.tconstruct.library.modifiers.Modifier;
+import slimeknights.tconstruct.library.modifiers.impl.NoLevelsModifier;
 import slimeknights.tconstruct.library.modifiers.util.ModifierDeferredRegister;
 import slimeknights.tconstruct.library.modifiers.util.StaticModifier;
 
@@ -16,4 +18,6 @@ public class TinkerTantrumModifiers {
     public static final StaticModifier<QuarkyModifier> QUARKY = MODIFIERS.register("quarky", QuarkyModifier::new);
 
     public static final StaticModifier<OverchargingModifier> OVERCHARGING = MODIFIERS.register("overcharging", OverchargingModifier::new);
+
+    public static final StaticModifier<Modifier> FERROMAGNETIC = MODIFIERS.register("ferromagnetic", NoLevelsModifier::new);
 }
