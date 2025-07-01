@@ -17,13 +17,13 @@ public abstract class MagnetUtilMixin {
             at = @At(value = "INVOKE",
                     target = "Lnet/minecraft/world/item/ItemStack;is(Lnet/minecraft/tags/TagKey;)Z"))
     private static boolean tinkertantrum_isDynamicallyMagnetic_isModifiableAndFerromagnetic(ItemStack stack, TagKey<Item> tag, Operation<Boolean> original) {
-        return original.call(stack, tag) || TinkerTantrumCompatUtil.isModifiableAndFerromagnetic(stack);
+        return original.call(stack, tag) || TinkerTantrumCompatUtil.isModifiableAndFerromagnetic(stack, 1);
     }
 
     @WrapOperation(method = "isPulledByMagnets", remap = false,
             at = @At(value = "INVOKE",
                     target = "Lnet/minecraft/world/item/ItemStack;is(Lnet/minecraft/tags/TagKey;)Z"))
     private static boolean tinkertantrum_isPulledByMagnets(ItemStack stack, TagKey<Item> tag, Operation<Boolean> original) {
-        return original.call(stack, tag) || TinkerTantrumCompatUtil.isModifiableAndFerromagnetic(stack);
+        return original.call(stack, tag) || TinkerTantrumCompatUtil.isModifiableAndFerromagnetic(stack, 1);
     }
 }

@@ -30,8 +30,9 @@ public class TinkerTantrumConfig {
             .comment("How many hits are required for Overcharging to add Overslime to all worn armor that accepts it.")
             .defineInRange("overchargingHits", 5, 1, 100);
 
-    public static final ForgeConfigSpec.IntValue OVERMENDING_RECHARGE_FREQUENCY = BUILDER.comment()
-    .defineInRange("overmendingRechargeFrequency", 100, 1, 1200);
+    public static final ForgeConfigSpec.IntValue OVERMENDING_RECHARGE_FREQUENCY = BUILDER
+            .comment("Delay in Ticks between attempts by items with the Overmending modifier to drain charge and gain Overslime.")
+            .defineInRange("overmendingRechargeFrequency", 200, 1, 1200);
 
     static final ForgeConfigSpec SPEC = BUILDER.build();
 

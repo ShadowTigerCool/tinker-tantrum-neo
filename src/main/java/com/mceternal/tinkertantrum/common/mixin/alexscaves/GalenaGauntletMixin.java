@@ -18,7 +18,7 @@ public abstract class GalenaGauntletMixin {
                     target = "Lnet/minecraft/world/item/ItemStack;is(Lnet/minecraft/tags/TagKey;)Z"))
     public boolean tinkertantrum_use_isModifiableAndFerromagnetic(ItemStack stack, TagKey<Item> pTag, Operation<Boolean> original) {
         //TinkerTantrum.LOGGER.info("resolving GalenaGauntletMixin#use_isModifiableAndFerromagnetic");
-        return original.call(stack, pTag) || TinkerTantrumCompatUtil.isModifiableAndFerromagnetic(stack);
+        return original.call(stack, pTag) || TinkerTantrumCompatUtil.isModifiableAndFerromagnetic(stack, 2);
     }
 
     @WrapOperation(method  = "onUseTick", remap = false,
@@ -26,6 +26,6 @@ public abstract class GalenaGauntletMixin {
             target = "Lnet/minecraft/world/item/ItemStack;is(Lnet/minecraft/tags/TagKey;)Z"))
     public boolean tinkertantrum_onUseTick_isModifiableAndFerromagnetic(ItemStack stack, TagKey<Item> pTag, Operation<Boolean> original) {
         //TinkerTantrum.LOGGER.info("resolving GalenaGauntletMixin#onUseTick_isModifiableAndFerromagnetic");
-        return original.call(stack, pTag) || TinkerTantrumCompatUtil.isModifiableAndFerromagnetic(stack);
+        return original.call(stack, pTag) || TinkerTantrumCompatUtil.isModifiableAndFerromagnetic(stack, 2);
     }
 }

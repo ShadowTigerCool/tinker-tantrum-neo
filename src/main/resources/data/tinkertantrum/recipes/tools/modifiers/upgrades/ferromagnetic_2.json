@@ -1,0 +1,29 @@
+{
+  "type": "tconstruct:modifier",
+  "conditions": [
+    {
+      "type": "forge:mod_loaded",
+      "modid": "alexscaves"
+    }
+  ],
+  "allow_crystal": true,
+  "inputs": [
+    {
+      "item": "alexscaves:notor_gizmo"
+    },
+    {
+      "item": "alexscaves:telecore"
+    },
+    {
+      "item": "alexscaves:notor_gizmo"
+    }
+  ],
+  "level": 2,
+  "slots": {
+    "abilities": 1
+  },
+  "result": "tinkertantrum:ferromagnetic",
+  "tools":{
+    "tag": "tconstruct:modifiable"
+  }
+}
