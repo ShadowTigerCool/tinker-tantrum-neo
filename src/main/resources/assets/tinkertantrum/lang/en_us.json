@@ -8,6 +8,15 @@
   "modifier.tinkertantrum.overcharging.description": "Builds up Overslime on equipped Armor as you deal Damage.",
 
   "modifier.tinkertantrum.ferromagnetic": "Ferromagnetic",
-  "modifier.tinkertantrum.ferromagnetic.flavor": "Shocking?",
-  "modifier.tinkertantrum.ferromagnetic.description": "This item is Ferromagnetic, and can be manipulated by Magnetic forces."
+  "modifier.tinkertantrum.ferromagnetic.flavor": "Shocking?", "_comment1": "This is a Placeholder",
+  "modifier.tinkertantrum.ferromagnetic.description": "This item is Ferromagnetic, and can be manipulated by Magnetic forces.",
+
+  "modifier.tinkertantrum.overmending": "Overmending",
+  "modifier.tinkertantrum.overmending.flavor": "Might be Overpowered",
+  "modifier.tinkertantrum.overmending.description": "Collects XP when equipped, and converts it to Overslime over time.",
+  "description.tinkertantrum.overmending.charge": "XP Stored: $1%s / $2%s",
+
+  "modifier.tinkertantrum.veinmining": "Vein Mining",
+  "modifier.tinkertantrum.veinmining.flavor": "When the Demon's blood is Gushing...", "_comment0": "this is just a completely random deltarune reference for no reason because nothing else came to mind. it's functionally a placeholder.",
+  "modifier.tinkertantrum.veinmining.description": "Enables Vein Mining for the Tool."
 }

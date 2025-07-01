@@ -13,6 +13,7 @@ public class TinkerTantrumConfig {
     public static boolean opQuarky;
     public static double quarkyEffectPerStack;
     public static int overchargingHitsPerCharge;
+    public static int overmendingRechargeFrequency;
 
 
     private static final ForgeConfigSpec.Builder BUILDER = new ForgeConfigSpec.Builder();
@@ -29,6 +30,9 @@ public class TinkerTantrumConfig {
             .comment("How many hits are required for Overcharging to add Overslime to all worn armor that accepts it.")
             .defineInRange("overchargingHits", 5, 1, 100);
 
+    public static final ForgeConfigSpec.IntValue OVERMENDING_RECHARGE_FREQUENCY = BUILDER.comment()
+    .defineInRange("overmendingRechargeFrequency", 100, 1, 1200);
+
     static final ForgeConfigSpec SPEC = BUILDER.build();
 
     @SubscribeEvent
@@ -37,5 +41,6 @@ public class TinkerTantrumConfig {
         opQuarky = OP_QUARKY.get();
         quarkyEffectPerStack = QUARKY_EFFECT_PER_STACK.get();
         overchargingHitsPerCharge = OVERCHARGING_HITS_PER_CHARGE.get();
+        overmendingRechargeFrequency = OVERMENDING_RECHARGE_FREQUENCY.get();
     }
 }

@@ -20,4 +20,8 @@ public class TinkerTantrumModifiers {
     public static final StaticModifier<OverchargingModifier> OVERCHARGING = MODIFIERS.register("overcharging", OverchargingModifier::new);
 
     public static final StaticModifier<Modifier> FERROMAGNETIC = MODIFIERS.register("ferromagnetic", NoLevelsModifier::new);
+
+    public static final StaticModifier<OvermendingModifier> OVERMENDING = MODIFIERS.register("overmending", OvermendingModifier::new);
+
+    //public static final StaticModifier<VeinMiningModifier> VEINMINING = MODIFIERS.register("veinmining", VeinMiningModifier::new);
 }

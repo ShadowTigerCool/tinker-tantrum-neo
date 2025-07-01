@@ -1,0 +1,29 @@
+{
+  "type": "tconstruct:modifier",
+  "allow_crystal": true,
+  "check_trait_level": false,
+  "inputs": [
+    {
+      "tag": "forge:ingots/slimesteel"
+    },
+    {
+      "item": "tconstruct:ichor_slime_crystal"
+    },
+    {
+      "tag": "forge:ingots/slimesteel"
+    },
+    {
+      "item": "tconstruct:sky_slime_ball"
+    },
+    {
+      "item": "tconstruct:sky_slime_ball"
+    }
+  ],
+  "slots": {
+    "upgrades": 1
+  },
+  "result": "tinkertantrum:overmending",
+  "tools":{
+    "tag": "tconstruct:modifiable"
+  }
+}

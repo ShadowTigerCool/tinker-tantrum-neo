@@ -1,0 +1,42 @@
+{
+  "type": "tconstruct:modifier",
+  "conditions": [
+    {
+      "type": "forge:mod_loaded",
+      "modid": "veinmining"
+    },
+    {
+      "type": "forge:mod_loaded",
+      "modid": "amethyst_tools"
+    }
+  ],
+  "allow_crystal": true,
+  "check_trait_level": true,
+  "inputs": [
+    {
+      "item": "amethyst_tools:enchanted_alloy"
+    },
+    {
+      "item": "tconstruct:ichor_slime_crystal"
+    },
+    {
+      "item": "amethyst_tools:enchanted_alloy"
+    },
+    {
+      "item": "tconstruct:sky_slime_crystal"
+    },
+    {
+      "item": "tconstruct:earth_slime_crystal"
+    }
+  ],
+  "level": {
+    "max": 1
+  },
+  "slots": {
+    "upgrades": 1
+  },
+  "result": "tinkertantrum:veinmining",
+  "tools":{
+    "tag": "tconstruct:modifiable/harvest"
+  }
+}
