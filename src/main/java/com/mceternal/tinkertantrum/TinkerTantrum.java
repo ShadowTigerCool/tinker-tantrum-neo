@@ -1,12 +1,11 @@
 package com.mceternal.tinkertantrum;
 
 import com.mceternal.tinkertantrum.common.modifiers.TinkerTantrumModifiers;
-import com.mceternal.tinkertantrum.data.TinkerTantrumTagProvider;
 import com.mojang.logging.LogUtils;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.common.MinecraftForge;
-import net.minecraftforge.data.event.GatherDataEvent;
+import net.minecraftforge.event.AddPackFindersEvent;
 import net.minecraftforge.event.BuildCreativeModeTabContentsEvent;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
@@ -35,6 +34,7 @@ public class TinkerTantrum
 
         // Register the commonSetup method for modloading
         modEventBus.addListener(this::commonSetup);
+        //modEventBus.addListener(this::addOptionalPacks);
 
         // Register ourselves for server and other game events we are interested in
         MinecraftForge.EVENT_BUS.register(this);
@@ -57,6 +57,38 @@ public class TinkerTantrum
     private void addCreative(BuildCreativeModeTabContentsEvent event)
     {
 
+    }
+
+    private void addOptionalPacks(AddPackFindersEvent event) {
+        /*
+        LOGGER.info("Fired AddPackFindersEvent for {}", event.getPackType());
+        if(event.getPackType() == PackType.SERVER_DATA) {
+            IModFile modFile = ModList.get().getModFileById(MODID).getFile();
+            Path resourcePath = modFile.findResource(MODID, "resources", "tinkertantrum-ferromagnetic_iron");
+            PathPackResources pack = new PathPackResources(modFile.getFileName() +":ferromagnetic_iron", resourcePath, true);
+            PackMetadataSection packMetadata;
+            try{
+                packMetadata = pack.getMetadataSection(PackMetadataSection.TYPE);
+                LOGGER.info("{}", packMetadata);
+            } catch (IOException e) {
+                throw new RuntimeException(e);
+            }
+            LOGGER.info("resourcePath: {}, pack: {}", resourcePath, pack);
+            if(packMetadata != null) {
+                LOGGER.info("trying to add Ferromagnetic Iron pack...");
+                event.addRepositorySource(c -> c.accept(Pack.create("tinkertantrum:ferromagnetic_iron",
+                        Component.literal("Tinker Tantrum - Ferromagnetic Iron"),
+                        false,
+                        s -> pack,
+                        new Pack.Info(packMetadata.getDescription(), packMetadata.getPackFormat(event.getPackType()), FeatureFlagSet.of()),
+                        event.getPackType(),
+                        Pack.Position.BOTTOM,
+                        false,
+                        PackSource.BUILT_IN
+                )));
+            }
+        }
+        */
     }
 
     // You can use EventBusSubscriber to automatically register all static methods in the class annotated with @SubscribeEvent

@@ -17,7 +17,8 @@ public class TinkerTantrumCompatUtil {
      * @return If this ItemStack is {@link IModifiable}, and has the modifier {@code tinkertantrum:ferromagnetic}
      */
     public static boolean isModifiableAndFerromagnetic(ItemStack stack, int minLevel) {
-        if(!(stack.getItem() instanceof IModifiable))
+        if(TinkerTantrumModifiers.FERROMAGNETIC == null
+                || !(stack.getItem() instanceof IModifiable))
             return false;
         ModifierEntry ferromagnetic = ToolStack.from(stack).getModifier(TinkerTantrumModifiers.FERROMAGNETIC.get());
         return ferromagnetic != ModifierEntry.EMPTY

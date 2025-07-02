@@ -1,0 +1,10 @@
+{
+  "condition": {
+    "type": "forge:mod_loaded",
+    "modid": "amethyst_tools"
+  },
+  "craftable": true,
+  "hidden": false,
+  "sortOrder": 10,
+  "tier": 2
+}

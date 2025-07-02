@@ -1,0 +1,9 @@
+{
+  "values": [
+    {
+      "id": "tinkertantrum:ferromagnetic",
+      "required": false
+    },
+    "tinkertantrum:overmending"
+  ]
+}

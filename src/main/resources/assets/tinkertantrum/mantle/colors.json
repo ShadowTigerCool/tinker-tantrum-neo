@@ -5,5 +5,8 @@
     "ferromagnetic": "#b1b2b3",
     "overmending": "#7af5c0",
     "veinmining": "#e26ded"
+  },
+  "material.tinkertantrum": {
+    "enchanted_amethyst": "#e26ded"
   }
 }

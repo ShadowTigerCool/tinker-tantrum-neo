@@ -1,28 +1,45 @@
 package com.mceternal.tinkertantrum.common.modifiers;
 
-import com.illusivesoulworks.veinmining.common.veinmining.VeinMiningEvents;
-import com.illusivesoulworks.veinmining.common.veinmining.VeinMiningPlayers;
-import com.illusivesoulworks.veinmining.common.veinmining.logic.VeinMiningLogic;
-import net.minecraft.server.level.ServerPlayer;
+import com.illusivesoulworks.veinmining.VeinMiningMod;
+import com.illusivesoulworks.veinmining.common.config.VeinMiningConfig;
+import net.minecraft.world.item.enchantment.Enchantment;
+import slimeknights.tconstruct.library.modifiers.Modifier;
 import slimeknights.tconstruct.library.modifiers.ModifierEntry;
 import slimeknights.tconstruct.library.modifiers.ModifierHooks;
-import slimeknights.tconstruct.library.modifiers.hook.mining.BlockBreakModifierHook;
-import slimeknights.tconstruct.library.modifiers.impl.NoLevelsModifier;
+import slimeknights.tconstruct.library.modifiers.hook.behavior.EnchantmentModifierHook;
 import slimeknights.tconstruct.library.module.ModuleHookMap;
-import slimeknights.tconstruct.library.tools.context.ToolHarvestContext;
 import slimeknights.tconstruct.library.tools.nbt.IToolStackView;
 
-public class VeinMiningModifier extends NoLevelsModifier implements BlockBreakModifierHook {
+public class VeinMiningModifier extends Modifier implements EnchantmentModifierHook.SingleEnchantment {
 
-    @Override
-    public void afterBlockBreak(IToolStackView tool, ModifierEntry modifier, ToolHarvestContext context) {
-        ServerPlayer player = context.getPlayer();
-        if(player == null) return;
-        //VeinMiningEvents.blockBreak(context.getPlayer(), context.getPos(), context.getState());
+    public int getVeinMiningLevel(IToolStackView tool) {
+        return getVeinMiningLevel(tool.getModifierLevel(this));
+    }
+
+    public int getVeinMiningLevel(ModifierEntry modifier) {
+        return getVeinMiningLevel(modifier.getLevel());
+    }
+
+    public int getVeinMiningLevel(int level) {
+        return Math.min(level, VeinMiningConfig.COMMON.levels.get());
     }
 
     @Override
     protected void registerHooks(ModuleHookMap.Builder hookBuilder) {
-        hookBuilder.addHook(this, ModifierHooks.BLOCK_BREAK);
+        hookBuilder.addHook(this, ModifierHooks.ENCHANTMENTS);
+    }
+
+    @Override
+    public int getEnchantmentLevel(IToolStackView tool, ModifierEntry modifier) {
+        return getVeinMiningLevel(modifier);
+    }
+
+    @Override
+    public Enchantment getEnchantment(IToolStackView tool, ModifierEntry modifier) {
+        return getEnchantment();
+    }
+
+    public Enchantment getEnchantment() {
+        return VeinMiningMod.ENCHANTMENT;
     }
 }

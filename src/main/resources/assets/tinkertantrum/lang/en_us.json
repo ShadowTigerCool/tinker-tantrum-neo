@@ -18,5 +18,9 @@
 
   "modifier.tinkertantrum.veinmining": "Vein Mining",
   "modifier.tinkertantrum.veinmining.flavor": "When the Demon's blood is Gushing...", "_comment0": "this is just a completely random deltarune reference for no reason because nothing else came to mind. it's functionally a placeholder.",
-  "modifier.tinkertantrum.veinmining.description": "Enables Vein Mining for the Tool."
+  "modifier.tinkertantrum.veinmining.description": "Allows the Tool to Vein Mine. Higher levels won't Vein Mine any better than the Enchantment can.",
+
+  "material.tinkertantrum.enchanted_amethyst": "Enchanted Alloy",
+  "material.tinkertantrum.enchanted_amethyst.flavor": "You can stop asking about Veinmining now!",
+  "material.tinkertantrum.enchanted_amethyst.encyclopedia": "Allows the Tool to Vein Mine, just like the Enchantment! Higher levels won't Vein Mine any better than the Enchantment can."
 }
