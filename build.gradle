@@ -151,6 +151,9 @@ repositories {
             includeGroup "curse.maven"
         }
     }
+    maven {
+        url 'https://maven.blakesmods.com'
+    }
 }
 
 dependencies {
@@ -195,6 +198,8 @@ dependencies {
     compileOnly fg.deobf("com.illusivesoulworks.spectrelib:spectrelib-forge:${spectrelib_version}+${minecraft_version}")
 
     runtimeOnly fg.deobf("curse.maven:amethyst-additions-902876:6693045")
+    runtimeOnly fg.deobf("com.blamejared.clumps:Clumps-forge-1.20.1:12.0.0.4")
+    runtimeOnly fg.deobf("com.blakebr0.cucumber:Cucumber:${minecraft_version}-${cucumber_version}")
 
     compileOnly(annotationProcessor("io.github.llamalad7:mixinextras-common:0.4.1"))
     implementation(jarJar("io.github.llamalad7:mixinextras-forge:0.4.1")) {
@@ -213,6 +218,7 @@ tasks.named('processResources', ProcessResources).configure {
             loader_version_range: loader_version_range,
             mod_id: mod_id, mod_name: mod_name, mod_license: mod_license, mod_version: mod_version,
             mod_authors: mod_authors, mod_description: mod_description,
+            tinkers_build: tinkers_build, mantle_build: mantle_build
     ]
     inputs.properties replaceProperties
 
