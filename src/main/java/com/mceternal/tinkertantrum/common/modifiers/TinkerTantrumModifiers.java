@@ -27,6 +27,8 @@ public class TinkerTantrumModifiers {
 
     public static final StaticModifier<VeinMiningModifier> VEINMINING = registerIfLoaded("veinmining", () -> VeinMiningModifier::new, "veinmining");
 
+    public static final StaticModifier<DeflectingModifier> DEFLECTING = MODIFIERS.register("deflecting", DeflectingModifier::new);
+
 
     private static <T extends Modifier> StaticModifier<T> registerIfLoaded(String id, Supplier<Supplier<T>> modifier, String mod) {
         return ModList.get().isLoaded(mod)

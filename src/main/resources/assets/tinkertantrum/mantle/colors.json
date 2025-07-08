@@ -4,7 +4,8 @@
     "overcharging": "#53c0c9",
     "ferromagnetic": "#b1b2b3",
     "overmending": "#7af5c0",
-    "veinmining": "#e26ded"
+    "veinmining": "#e26ded",
+    "deflecting": "#8ca7d1"
   },
   "material.tinkertantrum": {
     "enchanted_amethyst": "#e26ded"
