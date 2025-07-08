@@ -14,6 +14,8 @@ public class TinkerTantrumConfig {
     public static double quarkyEffectPerStack;
     public static int overchargingHitsPerCharge;
     public static int overmendingRechargeFrequency;
+    public static int deflectingWindow;
+    public static int deflectingBaseCooldown;
 
 
     private static final ForgeConfigSpec.Builder BUILDER = new ForgeConfigSpec.Builder();
@@ -34,6 +36,15 @@ public class TinkerTantrumConfig {
             .comment("Delay in Ticks between attempts by items with the Overmending modifier to drain charge and gain Overslime.")
             .defineInRange("overmendingRechargeFrequency", 200, 1, 1200);
 
+    public static final ForgeConfigSpec.IntValue DEFLECTING_WINDOW = BUILDER
+            .comment("Window of time after attacking in which the Deflecting modifier can be used.")
+            .defineInRange("deflectingWindow", 20, 5, 100);
+
+    public static final ForgeConfigSpec.IntValue DEFLECTING_BASE_COOLDOWN = BUILDER
+            .comment("Base Cooldown after using the Deflecting modifier's Block.")
+            .comment("This value is divided by the tool's Attack Speed to produce the applied cooldown.")
+            .defineInRange("deflectingBaseCooldown", 30, 5, 200);
+
     static final ForgeConfigSpec SPEC = BUILDER.build();
 
     @SubscribeEvent
@@ -43,5 +54,7 @@ public class TinkerTantrumConfig {
         quarkyEffectPerStack = QUARKY_EFFECT_PER_STACK.get();
         overchargingHitsPerCharge = OVERCHARGING_HITS_PER_CHARGE.get();
         overmendingRechargeFrequency = OVERMENDING_RECHARGE_FREQUENCY.get();
+        deflectingWindow = DEFLECTING_WINDOW.get();
+        deflectingBaseCooldown = DEFLECTING_BASE_COOLDOWN.get();
     }
 }

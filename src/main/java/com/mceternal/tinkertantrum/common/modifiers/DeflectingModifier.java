@@ -63,13 +63,13 @@ public class DeflectingModifier extends NoLevelsModifier implements ToolActionMo
     @Override
     public void onFinishUsing(IToolStackView tool, ModifierEntry modifier, LivingEntity entity) {
         if(entity instanceof Player player)
-            player.getCooldowns().addCooldown(tool.getItem(), (int) (30 / tool.getStats().get(ToolStats.ATTACK_SPEED)));
+            player.getCooldowns().addCooldown(tool.getItem(), (int) (TinkerTantrumConfig.deflectingBaseCooldown / tool.getStats().get(ToolStats.ATTACK_SPEED)));
     }
 
     @Override
     public void onStoppedUsing(IToolStackView tool, ModifierEntry modifier, LivingEntity entity, int timeLeft) {
         if(entity instanceof Player player)
-            player.getCooldowns().addCooldown(tool.getItem(), (int) (30 / tool.getStats().get(ToolStats.ATTACK_SPEED)));
+            player.getCooldowns().addCooldown(tool.getItem(), (int) (TinkerTantrumConfig.deflectingBaseCooldown / tool.getStats().get(ToolStats.ATTACK_SPEED)));
     }
 
     @Override
