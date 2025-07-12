@@ -20,7 +20,7 @@
     }
   ],
   "slots": {
-    "upgrades": 1
+    "abilities": 1
   },
   "result": "tinkertantrum:overmending",
   "tools":{

@@ -52,7 +52,7 @@ public class OvermendingModifier extends Modifier implements InventoryTickModifi
     }
 
     public int getMaxCharge(int level) {
-            return 25 * level;
+            return 30 * level;
     }
 
     public void chargeOverslime(IToolStackView tool, int amount) {
@@ -103,7 +103,7 @@ public class OvermendingModifier extends Modifier implements InventoryTickModifi
     }
      */
 
-    @SubscribeEvent
+    @SubscribeEvent(priority = EventPriority.HIGH)
     public void experiencePickup(PlayerXpEvent.PickupXp event) {
         //TinkerTantrum.LOGGER.info("caught PlayerXpEvent.PickupXp");
         int xpValue = event.getOrb().getValue();

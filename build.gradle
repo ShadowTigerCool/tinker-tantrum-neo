@@ -154,6 +154,17 @@ repositories {
     maven {
         url 'https://maven.blakesmods.com'
     }
+    maven {
+        name "KosmX's maven"
+        url 'https://maven.kosmx.dev/'
+    }
+    maven {
+        url 'https://api.modrinth.com/maven'
+        content {
+            includeGroup("maven.modrinth")
+        }
+    }
+    maven { url "https://maven.shedaniel.me/" }
 }
 
 dependencies {
@@ -204,6 +215,7 @@ dependencies {
     runtimeOnly "curse.maven:tinkers-katanas-884944:6632301"
     runtimeOnly fg.deobf("maven.modrinth:better-combat:${bettercombat_version}+${minecraft_version}-forge")
     runtimeOnly fg.deobf("me.shedaniel.cloth:cloth-config-forge:${cloth_version}")
+    runtimeOnly fg.deobf("dev.kosmx.player-anim:player-animation-lib-forge:${playeranim_version}+1.20")
 
     compileOnly(annotationProcessor("io.github.llamalad7:mixinextras-common:0.4.1"))
     implementation(jarJar("io.github.llamalad7:mixinextras-forge:0.4.1")) {

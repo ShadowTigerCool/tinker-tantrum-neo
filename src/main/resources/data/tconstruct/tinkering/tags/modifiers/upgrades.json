@@ -5,7 +5,6 @@
       "id": "tinkertantrum:ferromagnetic",
       "required": false
     },
-    "tinkertantrum:overmending",
     {
       "id": "tinkertantrum:veinmining",
       "required": false
