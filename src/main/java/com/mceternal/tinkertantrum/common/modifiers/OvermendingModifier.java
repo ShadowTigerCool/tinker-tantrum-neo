@@ -28,7 +28,7 @@ public class OvermendingModifier extends Modifier implements InventoryTickModifi
     public static final ResourceLocation KEY_OVERMENDING_CHARGE = TinkerTantrum.resource("overmending_charge");
 
     public OvermendingModifier() {
-        MinecraftForge.EVENT_BUS.addListener(EventPriority.LOW, this::experiencePickup);
+        MinecraftForge.EVENT_BUS.addListener(EventPriority.HIGH, this::experiencePickup);
     }
 
 
@@ -103,7 +103,7 @@ public class OvermendingModifier extends Modifier implements InventoryTickModifi
     }
      */
 
-    @SubscribeEvent(priority = EventPriority.HIGH)
+    @SubscribeEvent
     public void experiencePickup(PlayerXpEvent.PickupXp event) {
         //TinkerTantrum.LOGGER.info("caught PlayerXpEvent.PickupXp");
         int xpValue = event.getOrb().getValue();
