@@ -7,8 +7,8 @@
   ],
   "more_text_space": false,
   "effects": [
-    "Holds 12.5 Experience per level",
+    "Holds 15 Experience per level",
     "Conversion speed is determined by Level",
-    "Requires 1 upgrade slot per level"
+    "Requires 1 ability slot per level"
   ]
 }
