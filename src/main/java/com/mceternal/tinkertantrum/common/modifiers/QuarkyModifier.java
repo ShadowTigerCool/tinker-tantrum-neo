@@ -1,7 +1,6 @@
 package com.mceternal.tinkertantrum.common.modifiers;
 
 import com.google.common.collect.ImmutableList;
-import com.mceternal.tinkertantrum.TinkerTantrum;
 import com.mceternal.tinkertantrum.TinkerTantrumConfig;
 import net.minecraft.resources.ResourceKey;
 import net.minecraft.world.entity.LivingEntity;
@@ -25,7 +24,7 @@ public class QuarkyModifier extends NoLevelsModifier implements MeleeDamageModif
 
     @Override
     public float getMeleeDamage(IToolStackView tool, ModifierEntry modifier, ToolAttackContext context, float baseDamage, float damage) {
-        TinkerTantrum.LOGGER.info("Fired QuarkyModifier#getMeleeDamage!");
+        //TinkerTantrum.LOGGER.info("Fired QuarkyModifier#getMeleeDamage!");
         float sourceDamage = TinkerTantrumConfig.opQuarky ? damage : baseDamage;
         LivingEntity attacker = context.getAttacker();
         if(attacker instanceof Player player) {
@@ -41,7 +40,7 @@ public class QuarkyModifier extends NoLevelsModifier implements MeleeDamageModif
             if(isQuarky(stack))
                 effect += (float) (TinkerTantrumConfig.quarkyEffectPerStack * ((double) stack.getCount() / stack.getMaxStackSize()));
         }
-        TinkerTantrum.LOGGER.info("QuarkyModifier bonus: {}", effect);
+        //TinkerTantrum.LOGGER.info("QuarkyModifier bonus: {}", effect);
         return effect;
     }
 
