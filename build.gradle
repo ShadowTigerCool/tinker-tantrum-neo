@@ -4,7 +4,7 @@ plugins {
     id 'maven-publish'
     id 'net.minecraftforge.gradle' version '[6.0,6.2)'
     id 'org.parchmentmc.librarian.forgegradle' version '1.+'
-    //id 'org.spongepowered.mixingradle' version '0.7.+'
+    id 'org.spongepowered.mixin' version '0.7.+'
 }
 
 //apply plugin: 'org.spongepowered.mixin'
@@ -80,7 +80,7 @@ minecraft {
 
             property 'mixin.env.remapRefMap', 'true'
             property 'mixin.env.refMapRemappingFile', "${buildDir}/createSrgToMcp/output.srg"
-            arg "-mixin.config=${mod_id}.mixins.json"
+            //arg "-mixin.config=${mod_id}.mixins.json"
 
             mods {
                 "${mod_id}" {
@@ -260,12 +260,15 @@ tasks.named('jar', Jar).configure {
     // This is the preferred method to reobfuscate your jar file
     finalizedBy 'reobfJar'
 }
-/*
+
 mixin {
-    add sourceSets.main, 'tinkertantrum.refmap.json'
-    config 'tinkertantrum.mixins.json'
+    add sourceSets.main, "${mod_id}.refmap.json"
+    config "${mod_id}.mixins.json"
+
+    debug.verbose = true
+    debug.export = true
 }
-*/
+
 // However if you are in a multi-project build, dev time needs unobfed jar files, so you can delay the obfuscation until publishing by doing:
 // tasks.named('publish').configure {
 //     dependsOn 'reobfJar'
