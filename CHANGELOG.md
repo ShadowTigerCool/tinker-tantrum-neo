@@ -1,3 +1,26 @@
+## 1.1.1
+### Overly Patched (with magnets?)
+
+Added 1 new Modifier
+- Deflecting: After landing a hit, the Weapon can be used Block for a brief time. After use, this ability goes on Cooldown. Ending the blocking early will also put it on cooldown.
+  - Unobtainable by default, designed to be added to Katanas in MCE2.
+  - It's not called Parrying because Tinkers' already has something with that name, and it works differently.
+  - both the Window where you can Block and the Cooldown after Blocking ends are configurable.
+
+
+Fixed Overmending not always working 
+- Overmending is also now an Ability as opposed to an Upgrade.
+  - For something of its power level, it feels more appropriate.
+  - base XP buffer is also increased to compensate.
+  - and fun fact, Overworked affects it, have fun with that information.
+
+Fixed Ferromagnetic not working.
+- It was mostly me being dumb about Mixins, whoops. But it works fine now!
+
+Disabled some logging from the Quarky trait
+
+Enchanted Alloy material recipe should no longer spout errors when Amethyst Additions is not installed.
+
 
 ## 1.1.0
 First Big Update
