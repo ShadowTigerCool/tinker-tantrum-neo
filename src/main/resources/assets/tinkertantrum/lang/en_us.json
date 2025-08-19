@@ -24,6 +24,10 @@
   "modifier.tinkertantrum.deflecting.flavor": "While you were Mining and Crafting, I Studied the Blade.",
   "modifier.tinkertantrum.deflecting.description": "Allows the Tool to briefly Block after landing a hit.",
 
+  "modifier.tinkertantrum.wroughtslam": "Wroughtslam",
+  "modifier.tinkertantrum.wroughtslam.flavor": "Smashing!",
+  "modifier.tinkertantrum.wroughtslam.description": "Sneak and Use this Tool to unleash a shockwave attack!",
+
 
   "material.tinkertantrum.enchanted_amethyst": "Enchanted Alloy",
   "material.tinkertantrum.enchanted_amethyst.flavor": "You can stop asking about Veinmining now!",

@@ -155,6 +155,14 @@ repositories {
         url 'https://maven.blakesmods.com'
     }
     maven {
+        name = 'GeckoLib'
+        url 'https://dl.cloudsmith.io/public/geckolib3/geckolib/maven/'
+        content {
+            includeGroupByRegex("software\\.bernie.*")
+            includeGroup("com.eliotlash.mclib")
+        }
+    }
+    maven {
         name "KosmX's maven"
         url 'https://maven.kosmx.dev/'
     }
@@ -203,6 +211,7 @@ dependencies {
 
     implementation fg.deobf("curse.maven:alexs-caves-924854:5848216")
     runtimeOnly fg.deobf("curse.maven:citadel-331936:6702068")
+    implementation fg.deobf("curse.maven:mowzies-mobs-250498:6586086")
 
     implementation fg.deobf("curse.maven:vein-mining-431611:5481492")
     //compileOnly fg.deobf("com.illusivesoulworks.spectrelib:spectrelib-common:${spectrelib_version}+${minecraft_version}")
@@ -216,6 +225,7 @@ dependencies {
     runtimeOnly fg.deobf("maven.modrinth:better-combat:${bettercombat_version}+${minecraft_version}-forge")
     runtimeOnly fg.deobf("me.shedaniel.cloth:cloth-config-forge:${cloth_version}")
     runtimeOnly fg.deobf("dev.kosmx.player-anim:player-animation-lib-forge:${playeranim_version}+1.20")
+    runtimeOnly fg.deobf("software.bernie.geckolib:geckolib-forge-${minecraft_version}:${geckolib_version}")
 
     compileOnly(annotationProcessor("io.github.llamalad7:mixinextras-common:0.4.1"))
     implementation(jarJar("io.github.llamalad7:mixinextras-forge:0.4.1")) {

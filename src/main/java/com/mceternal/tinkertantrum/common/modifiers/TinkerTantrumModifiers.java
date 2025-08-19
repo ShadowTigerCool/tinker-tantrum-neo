@@ -29,6 +29,8 @@ public class TinkerTantrumModifiers {
 
     public static final StaticModifier<DeflectingModifier> DEFLECTING = MODIFIERS.register("deflecting", DeflectingModifier::new);
 
+    public static final StaticModifier<WroughtSlamModifier> WROUGHT_SLAM = registerIfLoaded("wroughtslam", () -> WroughtSlamModifier::new, "mowziesmobs");
+
 
     private static <T extends Modifier> StaticModifier<T> registerIfLoaded(String id, Supplier<Supplier<T>> modifier, String mod) {
         return ModList.get().isLoaded(mod)

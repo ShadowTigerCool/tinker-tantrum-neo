@@ -1,3 +1,10 @@
+## 1.1.2 WIP
+### More Modifiers!
+
+Added 1 new Modifier
+- Wroughtslam: Allows the Tool to do the Axe of a Thousand Metals' Shockwave slam Attack.
+
+
 ## 1.1.1
 ### Overly Patched (with magnets?)
 
