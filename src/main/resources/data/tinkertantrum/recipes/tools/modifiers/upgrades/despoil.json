@@ -1,0 +1,31 @@
+{
+  "type": "tconstruct:modifier",
+  "conditions": [
+    {
+      "type": "forge:mod_loaded",
+      "modid": "biomancy"
+    }
+  ],
+  "allow_crystal": true,
+  "inputs": [
+    {
+      "tag": "forge:bones"
+    },
+    {
+      "item": "biomancy:primordial_core"
+    },
+    {
+      "tag": "forge:bones"
+    }
+  ],
+  "level": {
+    "max": 3
+  },
+  "slots": {
+    "upgrades": 1
+  },
+  "result": "tinkertantrum:despoil",
+  "tools":{
+    "tag": "tconstruct:modifiable/melee"
+  }
+}

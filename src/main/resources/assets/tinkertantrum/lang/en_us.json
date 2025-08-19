@@ -28,6 +28,10 @@
   "modifier.tinkertantrum.wroughtslam.flavor": "Smashing!",
   "modifier.tinkertantrum.wroughtslam.description": "Sneak and Use this Tool to unleash a shockwave attack!",
 
+  "modifier.tinkertantrum.despoil": "Despoil",
+  "modifier.tinkertantrum.despoil.flavor": "Yummy :)",
+  "modifier.tinkertantrum.despoil.description": "Tool harvests special drops when killing mobs.",
+
 
   "material.tinkertantrum.enchanted_amethyst": "Enchanted Alloy",
   "material.tinkertantrum.enchanted_amethyst.flavor": "You can stop asking about Veinmining now!",

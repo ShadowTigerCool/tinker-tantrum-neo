@@ -1,6 +1,9 @@
 {
   "values": [
     "tinkertantrum:overcharging",
-    "tinkertantrum:wroughtslam"
+    {
+      "id": "tinkertantrum:wroughtslam",
+      "required": false
+    }
   ]
 }

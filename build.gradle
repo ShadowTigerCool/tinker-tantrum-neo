@@ -212,6 +212,7 @@ dependencies {
     implementation fg.deobf("curse.maven:alexs-caves-924854:5848216")
     runtimeOnly fg.deobf("curse.maven:citadel-331936:6702068")
     implementation fg.deobf("curse.maven:mowzies-mobs-250498:6586086")
+    implementation fg.deobf("curse.maven:biomancy-492939:5886758")
 
     implementation fg.deobf("curse.maven:vein-mining-431611:5481492")
     //compileOnly fg.deobf("com.illusivesoulworks.spectrelib:spectrelib-common:${spectrelib_version}+${minecraft_version}")

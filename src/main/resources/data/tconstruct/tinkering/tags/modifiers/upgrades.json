@@ -8,6 +8,10 @@
     {
       "id": "tinkertantrum:veinmining",
       "required": false
+    },
+    {
+      "id": "tinkertantrum:despoil",
+      "required": false
     }
   ]
 }

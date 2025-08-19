@@ -4,5 +4,6 @@
   "tinkertantrum:ferromagnetic": ["tinkertantrum:gui/modifiers/ferromagnetic", "tconstruct:gui/modifiers/book"],
   "tinkertantrum:overmending": ["tinkertantrum:gui/modifiers/overmending"],
   "tinkertantrum:veinmining": ["tinkertantrum:gui/modifiers/veinmining", "tconstruct:gui/modifiers/book"],
-  "tinkertantrum:wroughtslam": ["mowziesmobs:item/wrought_axe_icon", "tconstruct:gui/modifiers/book"]
+  "tinkertantrum:wroughtslam": ["mowziesmobs:item/wrought_axe_icon", "tconstruct:gui/modifiers/book"],
+  "tinkertantrum:despoil": ["biomancy:item/weapon/despoil_sickle", "biomancy:item/weapon/despoil_sickle_emissive", "tconstruct:gui/modifiers/book"]
 }
