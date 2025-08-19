@@ -173,6 +173,9 @@ repositories {
         }
     }
     maven { url "https://maven.shedaniel.me/" }
+    maven {
+        url = "https://maven.maxanier.de/releases"
+    }
 }
 
 dependencies {
@@ -217,6 +220,8 @@ dependencies {
     implementation fg.deobf("curse.maven:vein-mining-431611:5481492")
     //compileOnly fg.deobf("com.illusivesoulworks.spectrelib:spectrelib-common:${spectrelib_version}+${minecraft_version}")
     compileOnly fg.deobf("com.illusivesoulworks.spectrelib:spectrelib-forge:${spectrelib_version}+${minecraft_version}")
+
+    implementation fg.deobf("de.teamlapen.vampirism:Vampirism:${minecraft_version}-${vampirism_version}")
 
     runtimeOnly fg.deobf("curse.maven:amethyst-additions-902876:6693045")
     runtimeOnly fg.deobf("com.blamejared.clumps:Clumps-forge-1.20.1:12.0.0.4")

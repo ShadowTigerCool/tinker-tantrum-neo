@@ -1,0 +1,32 @@
+{
+  "values": [
+    {
+      "id": "#vampirism:vampire",
+      "required": false
+    },
+    {
+      "id": "vampirism:converted_donkey",
+      "required": false
+    },
+    {
+      "id": "vampirism:converted_fox",
+      "required": false
+    },
+    {
+      "id": "vampirism:converted_goat",
+      "required": false
+    },
+    {
+      "id": "vampirism:converted_horse",
+      "required": false
+    },
+    {
+      "id": "vampirism:converted_mule",
+      "required": false
+    },
+    {
+      "id": "vampirism:villager_converted",
+      "required": false
+    }
+  ]
+}

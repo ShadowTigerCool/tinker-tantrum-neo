@@ -1,0 +1,25 @@
+{
+  "type": "tconstruct:incremental_modifier",
+  "conditions": [
+    {
+      "type": "forge:mod_loaded",
+      "modid": "vampirism"
+    }
+  ],
+  "allow_crystal": true,
+  "input": {
+      "item": "vampirism:garlic_bread"
+  },
+  "amount_per_item": 1,
+  "level": {
+    "max": 5
+  },
+  "needed_per_level": 15,
+  "slots": {
+    "upgrades": 1
+  },
+  "result": "tinkertantrum:vampire_slayer",
+  "tools":{
+    "tag": "tconstruct:modifiable/melee"
+  }
+}

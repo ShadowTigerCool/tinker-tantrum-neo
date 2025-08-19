@@ -12,6 +12,10 @@
     {
       "id": "tinkertantrum:despoil",
       "required": false
+    },
+    {
+      "id": "tinkertantrum:vampire_slayer",
+      "required": false
     }
   ]
 }

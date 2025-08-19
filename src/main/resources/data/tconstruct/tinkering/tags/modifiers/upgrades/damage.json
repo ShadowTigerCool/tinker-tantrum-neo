@@ -1,5 +1,9 @@
 {
   "values": [
-    "tinkertantrum:quarky"
+    "tinkertantrum:quarky",
+    {
+      "id": "tinkertantrum:vampire_slayer",
+      "required": false
+    }
   ]
 }

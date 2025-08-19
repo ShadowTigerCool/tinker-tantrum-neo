@@ -5,6 +5,7 @@ import net.minecraft.core.Registry;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.resources.ResourceKey;
 import net.minecraft.tags.TagKey;
+import net.minecraft.world.entity.EntityType;
 import net.minecraft.world.item.Item;
 import slimeknights.tconstruct.library.materials.definition.IMaterial;
 import slimeknights.tconstruct.library.materials.definition.MaterialManager;
@@ -19,6 +20,15 @@ public class TinkerTantrumTags {
             return modTagForRegistry(Registries.ITEM, path);
         }
 
+    }
+
+    public static class Entity {
+
+        public static final TagKey<EntityType<?>> VAMPIRE_SLAYABLE = modTag("vampire_slayable");
+
+        public static TagKey<EntityType<?>> modTag(String path) {
+            return modTagForRegistry(Registries.ENTITY_TYPE, path);
+        }
     }
 
     public static class Materials {

@@ -26,11 +26,16 @@
 
   "modifier.tinkertantrum.wroughtslam": "Wroughtslam",
   "modifier.tinkertantrum.wroughtslam.flavor": "Smashing!",
-  "modifier.tinkertantrum.wroughtslam.description": "Sneak and Use this Tool to unleash a shockwave attack!",
+  "modifier.tinkertantrum.wroughtslam.description": "Sneak and Use the Tool to unleash a shockwave attack!",
 
   "modifier.tinkertantrum.despoil": "Despoil",
   "modifier.tinkertantrum.despoil.flavor": "Yummy :)",
   "modifier.tinkertantrum.despoil.description": "Tool harvests special drops when killing mobs.",
+
+  "modifier.tinkertantrum.vampire_slayer": "Vampire Slayer",
+  "modifier.tinkertantrum.vampire_slayer.flavor": "Buffy, Van Helsing, and the Belmonts.",
+  "modifier.tinkertantrum.vampire_slayer.description": "Tool does bonus damage to Vampiric creatures!",
+  "modifier.tinkertantrum.vampire_slayer.attack_damage": "Vampire Damage",
 
 
   "material.tinkertantrum.enchanted_amethyst": "Enchanted Alloy",
