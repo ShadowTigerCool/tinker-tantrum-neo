@@ -1,0 +1,16 @@
+{
+  "conditions": [
+    {
+      "type": "forge:mod_loaded",
+      "modid": "veinmining"
+    }
+  ],
+  "type": "tconstruct:modifier_salvage",
+  "modifier": "tinkertantrum:veinmining",
+  "slots": {
+    "upgrades": 1
+  },
+  "tools": {
+    "tag": "tconstruct:modifiable/harvest"
+  }
+}
