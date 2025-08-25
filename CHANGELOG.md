@@ -1,8 +1,10 @@
-## 1.1.2 WIP
-### More Modifiers!
+## 1.1.2
+### Intensive Integration!
 
-Added 1 new Modifier
-- Wroughtslam: Allows the Tool to do the Axe of a Thousand Metals' Shockwave slam Attack.
+Added 3 new Modifiers
+- Wroughtslam: Mowzie's Mobs integration. Allows the Tool to do the Axe of a Thousand Metals' Shockwave slam Attack.
+- Despoil: Biomancy integration. Equivalent to Biomancy's Despoil enchantment.
+- Vampire Slayer: Vampirism integration. Equivalent to Vampirism's Vampire Slayer enchantment, +2 Damage per level, modified by Tool's Damage multiplier. Additional creates can be defined as Vampires with the Entity tag "tinkertantrum:vampire_slayable".
 
 
 ## 1.1.1
